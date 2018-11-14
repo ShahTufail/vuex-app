@@ -23,7 +23,7 @@ computed : {
 },
 methods: {
     reducePrice(){
-    return this.$store.commit('reducePrice');
+    return this.$store.dispatch('reducePrice');
   },
 },
 };
