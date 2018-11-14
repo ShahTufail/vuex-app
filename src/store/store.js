@@ -33,4 +33,9 @@ export const store = new Vuex.Store({
       });
     },
 },
+  mutations: {
+    reducePrice(state) {
+    [...state.products].map(product => product.price -=1);
+    },
+    },
 });

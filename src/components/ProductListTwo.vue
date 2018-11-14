@@ -21,6 +21,11 @@ computed : {
     return this.$store.getters.saleProducts;
   },
 },
+methods: {
+    reducePrice(){
+    return this.$store.commit('reducePrice');
+  },
+},
 };
 </script>
 
