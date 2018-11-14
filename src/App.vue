@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-<product-list-one> </product-list-one>
-<product-list-two> </product-list-two>
+<product-list-one v-bind:products="products"> </product-list-one>
+<product-list-two v-bind:products="products"> </product-list-two>
   </div>
 </template>
 
@@ -30,4 +30,8 @@ export default {
 </script>
 
 <style>
+body{
+    font-family: Ubuntu;
+    color: #555;
+}
 </style>
