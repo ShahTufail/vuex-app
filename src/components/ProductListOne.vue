@@ -12,20 +12,22 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex'
 export default {
   name: "product-list-one",
 computed : {
   products() {
     return this.$store.state.products;
   },
-  saleProducts(){
-    return this.$store.getters.saleProducts;
-  },
+
+...mapGetters([
+'saleProducts',
+]),
 },
 methods: {
-  reducePrice(payload){
-    return this.$store.dispatch('reducePrice', payload);
-  },
+...mapActions( [
+  'reducePrice',
+])
 },
 };
 </script>
